@@ -1,0 +1,260 @@
+@import (inline)  './vendor/freelancer.css';
+@import (inline)  './vendor/font-awesome.css';
+
+@import 'anim';
+
+body{
+ background-color: #18BC9C
+}
+
+
+@canvas-width: 1140px;
+@canvas-height: 768px;
+@menu-height: 80px;
+
+span.upload-cta{
+	margin: 20px;
+	font-size: 1.5em;
+}
+
+.upload-subtitle{
+	font-size: .8em;
+	font-weight: 400;
+	text-transform: capitalize;
+}
+
+.fileUpload {
+    position: relative;
+    overflow: hidden;
+    margin: 0px;
+}
+
+.fileUpload input.upload,
+.row-menu input.upload,
+.cta-container input.upload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    filter: alpha(opacity=0);
+}
+
+.build-container{
+	position: relative;
+	padding:0;
+}
+
+.main-canvas-holder{
+	position: relative;
+	margin: 0 auto;
+	background: white;
+	width: 100%;
+	max-height: @canvas-height;
+}
+
+.canvas-container{
+	height: @canvas-height;
+	width: 100%;
+	background: silver;
+}
+
+
+.cta_modal{
+
+	border-radius: 15px;
+	border:5px solid #2C3E50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 300px;
+    flex-direction: column;
+    background: rgba(0,0,0,.1)
+}
+
+.main-canvas{
+	
+}
+
+.cta-container{
+	color: #2C3E50;
+	font-size: 30px;
+	position: absolute;
+	top:@menu-height;
+	position: absolute;
+	width: @canvas-width;
+	height: @canvas-height;
+    display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.cta-container .fa-upload{
+	font-size: 50px;
+}
+
+.row-menu{
+	width: 100%;
+	height:@menu-height;
+	background: #9933ff;
+}
+
+.row-menu .icon-left{
+	float:left;
+}
+.row-menu .icon-right{
+	float:right;
+}
+.row-menu .icon-right span{
+	margin-right: 10px;
+}
+.row-menu .icon-left span{
+	margin-left: 10px;
+}
+
+.row-menu .btn .fa{
+	margin: 0px;
+	height: 100%;
+	text-align: center;
+}
+.row-menu .btn {
+	border-radius: 0;
+	border: 0;
+	padding: 19px;
+	background: #9933ff;
+	min-width: 160px;
+}
+.btn-row{
+	font-size :26px;	
+}
+
+.toy-menu{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+    top:0;
+    left: 0px;
+    overflow-y: auto;
+    background: silver;
+    box-shadow: 0px 0px 20px rgba(0, 0,0, 0.5);
+
+    // transform:scale(.85);
+    // opacity: 0.5;
+
+    // -webkit-animation: pop-up-in .35s ease forwards;
+    // animation: pop-up-in .35s ease forwards;
+}
+.toy-menu-data{
+	position: absolute;
+	width: 100%;
+	top:@menu-height;
+	bottom:0;
+    overflow-y: auto;
+}
+
+.toy-menu .btn-close{
+	float: left;
+	padding:0;
+	display: flex;
+  	align-items: center;
+  	justify-content: center;
+	-webkit-flex-direction: column; /* Safari 6.1+ */
+	flex-direction: column; /* Safari 6.1+ */
+    display: flex;
+    min-width: 120px;
+    height: 100%;
+}
+
+.toy-menu .btn-close .close-button{
+	font-size:4em;
+	height:auto;
+}
+
+.toy-menu-item{
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 20px;
+}
+
+.toy-menu-item img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+.toyMod{
+	position: absolute;
+}
+
+.toyModRect{
+	position: absolute;
+	background: linear-gradient(90deg, #2C3E50 50%, transparent 50%), linear-gradient(90deg, #2C3E50 50%, transparent 50%), linear-gradient(0deg, #2C3E50 50%, transparent 50%), linear-gradient(0deg, #2C3E50 50%, transparent 50%);
+	background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+	background-size: 15px 4px, 15px 4px, 4px 15px, 4px 15px;
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+	cursor: pointer;
+	// outline:1px solid rgba(255, 255, 255, 0.5);
+}
+
+.toyMod .bar{
+	background:  #2C3E50;
+	cursor: pointer;
+	position: absolute;
+	left:0px;
+	top:25px;
+	width: 50px;
+	height: 50px;
+	box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+	border-radius: 28px;
+	border:3px solid white;
+	box-sizing:content-box;
+}
+.toyMod .perp{
+	background:#2C3E50;
+    position:relative;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+.toyMod .icon_bar{
+	font-size: 30px;
+	margin: 10px;
+}
+
+.toy-menu-category-holder{
+	height: 100%;
+}
+.toy-menu-category-holder .toy-cat-item{
+	height: 100%;
+	font-size: 1.2em;
+	font-weight: bold;
+	text-transform: capitalize;;
+}
+
+.file_upload_circle{
+	border-radius: 100px;
+	width: 200px;
+	height: 200px;
+	border: 7px solid white;
+	text-align: center;
+  	display: flex;
+  	align-items: center;
+  	justify-content: center;
+  	cursor: pointer;
+  	margin: 20px auto 20px auto;
+
+}
+.file_upload_circle .fa-camera-retro{
+	font-size: 90px;
+}
+
+#emoji-collection{
+	margin: 80px auto;
+	max-width: 450px;
+}
+
+

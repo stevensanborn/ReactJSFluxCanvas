@@ -1,0 +1,18 @@
+{
+  "name": "cckfy",
+  "description": "",
+  "main": "gulpfile.js",
+  "authors": [
+    "Steven Sanborn <steven@feedtank.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
